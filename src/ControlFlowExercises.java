@@ -1,33 +1,15 @@
+import java.util.Scanner;
+
 public class ControlFlowExercises {
 
 
     public static void main(String[] args) {
 
-        int i = 1;
+        Scanner sc = new Scanner(System.in);
 
-        while(i <= 100) {
+        System.out.println("Please Enter An Integer");
 
-            if(i % 3 == 0 && i % 5 == 0){
-
-                System.out.println("FizzBuzz");
-
-            }else if (i % 3 == 0){
-
-                System.out.println("Fizz");
-
-            }else if (i % 5 == 0){
-
-                System.out.println("Buzz");
-
-            }else{
-
-                System.out.println(i);
-
-            }
-
-            i++;
-        }
-
+        int input = sc.nextInt();
 
 
     }
