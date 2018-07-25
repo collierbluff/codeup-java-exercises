@@ -11,6 +11,15 @@ public class ControlFlowExercises {
 
         int input = sc.nextInt();
 
+        System.out.println("number   | squared | cubed");
+
+        for (int i = 1; i <= input; i++){
+
+            System.out.print(i + "        | ");
+            System.out.print((i*i)+ "       | ");
+            System.out.println(i*i*i);
+
+        }
 
     }
 
