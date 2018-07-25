@@ -8,24 +8,31 @@ public class Bob {
 
         System.out.println("Talk to Bob!");
 
-        String input = sc.nextLine();
 
-        if (input.equals("")){
+        boolean terminate = false;
 
-            System.out.println("Fine. Be that way!");
+        while(!terminate){
 
-        }else if (input.endsWith("?")){
+            String input = sc.nextLine();
 
-            System.out.println("Sure.");
+            if (input.equals("")){
 
-        }else if ((input.equals(input.toUpperCase())) || input.endsWith("!")){
+                System.out.println("Fine. Be that way!");
+                terminate = true;
 
-            System.out.println("Whoa, chill out!");
+            }else if (input.endsWith("?")){
 
-        }else{
+                System.out.println("Sure.");
 
-            System.out.println("Whatever.");
+            }else if ((input.equals(input.toUpperCase())) || input.endsWith("!")){
 
+                System.out.println("Whoa, chill out!");
+
+            }else{
+
+                System.out.println("Whatever.");
+
+            }
         }
 
 
