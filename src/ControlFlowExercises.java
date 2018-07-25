@@ -7,19 +7,35 @@ public class ControlFlowExercises {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Please Enter An Integer");
 
-        int input = sc.nextInt();
+        char confirm = 'y';
 
-        System.out.println("number   | squared | cubed");
+while(confirm == 'y') {
 
-        for (int i = 1; i <= input; i++){
+    System.out.println("Please enter a grade to translate: ");
+    byte input = sc.nextByte();
 
-            System.out.print(i + "        | ");
-            System.out.print((i*i)+ "       | ");
-            System.out.println(i*i*i);
+    if (input > 87) {
+        System.out.println("That's an A");
+    } else if (input > 79) {
+        System.out.println("That's a B");
+    } else if (input > 66) {
+        System.out.println("That's a C");
+    } else if (input > 59) {
+        System.out.println("That's a D");
+    } else {
+        System.out.println("That's an F");
+    }
 
-        }
+    System.out.println("Would you like to continue? (y/n)");
+
+    String confirmationString = sc.next();
+
+    confirm = confirmationString.charAt(0);
+
+
+}
+
 
     }
 
