@@ -10,8 +10,8 @@ public class MethodsExercises {
 
 
 //        Part 1:
-//        int a = 5;
-//        int b = 2;
+        int a = 5;
+        int b = 2;
 //
 //        System.out.println("Add: " + add(a,b));
 //        System.out.println("Subtract: " + subtract(a,b));
@@ -44,9 +44,18 @@ public class MethodsExercises {
         return a - b;
     }
 
+//    Bonus: multiply without *
+
     public static int multiply(int a, int b){
 
-        return a * b;
+        int total = 0;
+
+        for(int i = 1; i <= b; i++){
+
+            total += a;
+        }
+
+        return total;
     }
 
     public static double divide(double a, double b){
@@ -63,7 +72,7 @@ public class MethodsExercises {
 
     public static int getInteger(int min, int max){
 
-        System.out.println("Please enter a number between 1 and 10");
+        System.out.println("Please enter a number between " + min + " and " + max);
 
         int num = sc.nextInt();
         sc.nextLine();
@@ -77,7 +86,6 @@ public class MethodsExercises {
         }
 
         return num;
-
     }
 
 //    Part 3:
@@ -88,16 +96,24 @@ public class MethodsExercises {
 
         while(looping) {
 
-            int input = getInteger(1, 10);
+            int input = getInteger(1, 25);
 
             long total = 1;
+
+            StringBuilder output = new StringBuilder();
 
             for(int i = 1; i <= input; i++){
 
                 total = total * i;
+
+                if(i == input){
+                    output.append(i);
+                }else {
+                    output.append(i).append(" x ");
+                }
             }
 
-            System.out.println(total);
+            System.out.println(input + "! = " + output + " = " + total);
 
 
             System.out.println("Want to continue? (y/n)");
