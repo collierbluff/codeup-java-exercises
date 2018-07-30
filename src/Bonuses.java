@@ -210,9 +210,7 @@ boolean goAgain = false;
 
             String yN = sc.nextLine();
 
-            if(yN.equalsIgnoreCase("y")){
-                goAgain = true;
-            }else{goAgain = false;}
+            goAgain = yN.equalsIgnoreCase("y");
 
         }while(goAgain);
     }
