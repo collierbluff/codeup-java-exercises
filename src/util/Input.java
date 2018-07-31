@@ -23,7 +23,7 @@ public class Input {
 
     public int getInt(int min, int max){
 
-        System.out.println("Gimme a number between " + min + " and " + max + "!");
+//        System.out.println("Gimme a number between " + min + " and " + max + "!");
         int input = scanner.nextInt();
         scanner.nextLine();
 
