@@ -26,7 +26,7 @@ public class Bonuses {
 
 //        timeConversion();
 
-//        hangman();
+        hangman();
 
 //        dateConverter();
     }
