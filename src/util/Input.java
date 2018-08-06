@@ -35,10 +35,17 @@ public class Input {
     public int getInt(){
         System.out.println("Gimme a number!");
 
-        int input = scanner.nextInt();
-        scanner.nextLine();
+        String input = scanner.nextLine();
+        int output = 0;
 
-        return input;
+        try {
+            output = Integer.valueOf(input);
+        }catch (Exception e){
+            System.out.println("That wasn't an Integer!");
+            return getInt();
+        }
+
+        return output;
 
     }
 
@@ -57,10 +64,17 @@ public class Input {
     public double getDouble(){
         System.out.println("Gimme a number!");
 
-        double input = scanner.nextDouble();
-        scanner.nextLine();
+        String input = scanner.nextLine();
+        double output = 0;
 
-        return input;
+        try {
+            output = Double.valueOf(input);
+        }catch (Exception e){
+            System.out.println("That wasn't a Double!");
+            return getDouble();
+        }
+
+        return output;
 
     }
 }

@@ -7,11 +7,7 @@ public class InputTest {
 
         Input input = new Input();
 
-        input.getString();
-        input.getInt(3, 5);
-        input.yesNo();
-
-
+        input.getDouble();
 
     }
 }
